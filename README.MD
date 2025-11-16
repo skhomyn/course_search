@@ -3,22 +3,23 @@ At Top Hat students are assigned homework items, these are organized into folder
 subfolders. We would like to develop an application that will search within the course tree and
 outputs structured items & their subitems.
 
-● The API will return a course tree as a flat list of items
-● show all items so that child items appear immediately after their parent in the list
-● Nested items should be indented with hyphens
-● The number of hyphens should correspond to the depth level of the item
-● Items with “0” parent id are at the top of the hierarchy
+- The API will return a course tree as a flat list of items
+- show all items so that child items appear immediately after their parent in the list
+- Nested items should be indented with hyphens
+- The number of hyphens should correspond to the depth level of the item
+- Items with “0” parent id are at the top of the hierarchy
 Key Features:
-● A text box where students can enter their search string.
-● A submit button, that submits the data to a
+- A text box where students can enter their search string.
+- A submit button, that submits the data to a
 https://coursetreesearch-service-sandbox.dev.tophat.com/?query={SEARCH_TERM} and returns a result as a flat tree structure.
-● A container to display course hierarchy.
-● Catch any network errors and display an error message to the user to try again.
-○ Tip: You can search for the “error” keyword, this will return an empty result.
+- A container to display course hierarchy.
+- Catch any network errors and display an error message to the user to try again.
+- Tip: You can search for the “error” keyword, this will return an empty result.
 
 Example:
 A student is searching for the keyword “Lab” in a Chemistry course. A course tree will return as
 below
+```
 items = [
   {"id": 5, "name": "Chemical Kinetics", "parent_id": 6},
   {"id": 3, "name": "Surface Chemistry", "parent_id": 1},
@@ -28,7 +29,10 @@ items = [
   {"id": 6, "name": "Lab Experiment 2", "parent_id": 0},
   {"id": 7, "name": "Colloidal Solution of Gum", "parent_id": 3}
 ]
+```
+
 Your resulting tree will be
+```
 Lab Experiment 1
 - Surface Chemistry
 - - Colloidal Solution (sol) of Starch
@@ -36,13 +40,7 @@ Lab Experiment 1
 - Lab 1 Summary
 Lab Experiment 2
 - Chemical Kinetics
-
-Other notes:
-● You can choose to work with any front-end library, or framework that you feel
-comfortable with.
-● Please provide us with a compressed file of your code and an instruction on how to
-execute this code.
-
+```
 
 ---
 
@@ -106,20 +104,6 @@ The test suite includes:
 - API service tests with mocked fetch
 - Component tests for all React components
 - Integration tests for the main App component
-
-### Building for Production
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory. You can preview the production build with:
-
-```bash
-npm run preview
-```
 
 ### Project Structure
 
