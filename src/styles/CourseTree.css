@@ -1,0 +1,24 @@
+.course-tree,
+.course-tree-empty {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.course-tree-empty {
+  color: #666;
+  text-align: center;
+}
+
+.course-tree-item {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.course-tree-item:first-child {
+  padding-top: 0;
+}

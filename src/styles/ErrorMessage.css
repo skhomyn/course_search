@@ -1,0 +1,15 @@
+.error-message {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: 4px;
+  color: #c33;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.error-text {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
