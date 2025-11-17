@@ -7,7 +7,7 @@ describe('CourseTree', () => {
   it('should render empty state when no items', () => {
     render(<CourseTree items={[]} />);
     
-    expect(screen.getByText('No items to display.')).toBeInTheDocument();
+    expect(screen.getByText('No results found for your search.')).toBeInTheDocument();
   });
 
   it('should render tree with correct indentation', () => {
