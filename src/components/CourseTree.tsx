@@ -19,7 +19,7 @@ interface CourseTreeProps {
 export function CourseTree({ items }: CourseTreeProps) {
   const displayItems = buildTree(items);
   if (displayItems.length === 0) {
-    return <div className="course-tree-empty">No items to display.</div>;
+    return <div className="course-tree-empty">No results found for your search.</div>;
   }
 
   return (

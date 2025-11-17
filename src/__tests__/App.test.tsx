@@ -59,7 +59,7 @@ describe('App Integration Tests', () => {
     const input = screen.getByRole('textbox');
     const button = screen.getByRole('button', { name: /search/i });
 
-    await user.type(input, 'Lab');
+    await user.type(input, 'error');
     await user.click(button);
 
     await waitFor(() => {
@@ -112,11 +112,12 @@ describe('App Integration Tests', () => {
     const input = screen.getByRole('textbox');
     const button = screen.getByRole('button', { name: /search/i });
 
-    await user.type(input, 'error');
+    await user.type(input, 'lab');
     await user.click(button);
 
     await waitFor(() => {
       expect(screen.getByText('No results found for your search.')).toBeInTheDocument();
+      expect(screen.queryByText('Network error')).not.toBeInTheDocument();
     });
   });
 

@@ -54,7 +54,7 @@ function App() {
         
         {error && <ErrorMessage message={error} />}
         
-        {hasSearched && <CourseTree items={items} />}
+        {hasSearched && !error && <CourseTree items={items} />}
       </main>
     </div>
   );
